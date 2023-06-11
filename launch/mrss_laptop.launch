@@ -1,0 +1,50 @@
+<launch>
+    <arg name="data_dir" default="$(find tagslam)/example"/>
+    <arg name="config_dir" default="$(arg data_dir)"/>
+
+    <!--Camera URDF-->
+    <param name="robot_description" textfile="$(arg config_dir)/urdf/camera.urdf" />
+    <arg name="tagslam_config_file" default="$(arg config_dir)/tagslam_mrss.yaml"/>
+    <arg name="calibration_file" default="$(arg config_dir)/realsense_usb2.yaml"/>
+    <arg name="camera_poses_file" default="$(arg config_dir)/camera_poses_go1.yaml"/>
+    <arg name="run_online" default="true"/>
+    <arg name="bag" default="$(arg data_dir)/example.bag"/>
+    <arg name="max_number_of_frames" default="1000000"/>
+    <arg name="start_time" default="0.0"/>
+    <arg name="has_compressed_images" default="true"/>
+    <arg name="laptop_cam" default="true"/>
+    <arg name="rviz" default="false"/>
+    <arg name="goal" default="false"/>
+    <arg name="go1_odom" default="true"/>
+
+    <!--Go1 Pseudo-Odometry-->
+    <group if="$(arg go1_odom)">
+        <node pkg="go1_odom" type="odometry.py"
+          name="odom_spoof" />
+    </group>
+
+    <!--April Tag Predictor-->
+    <include file="$(find tagslam)/launch/apriltag_detector_node.launch"/>
+
+    <!--Realsense camera-->
+    <group if="$(arg laptop_cam)">
+        <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+    </group>
+
+    <!--TagSLAM launcher-->
+    <include file="$(find tagslam)/launch/tagslam.launch">
+        <arg name="tagslam_config_file" value="$(arg tagslam_config_file)"/>
+        <arg name="calibration_file" value="$(arg calibration_file)"/>
+        <arg name="camera_poses_file" value="$(arg camera_poses_file)"/>
+        <arg name="run_online" value="$(arg run_online)"/>
+        <arg name="bag" value="$(arg bag)"/>
+        <arg name="max_number_of_frames" value="(arg max_number_of_frames)"/>
+        <arg name="start_time" value="(arg start_time)"/>
+        <arg name="has_compressed_images" value="(arg has_compressed_images)"/>
+    </include>
+
+    <!--Rviz-->
+    <group if="$(arg rviz)">
+        <node type="rviz" name="rviz" pkg="rviz" args="-d $(find tagslam)/example/tagslam_example.rviz" />
+    </group>
+</launch>

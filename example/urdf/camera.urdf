@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="cameras">
+  <link name="map"/>
+  <material name="orange">
+    <color rgba="0.94509804 0.35294118 0.1333333333 1.000000"/>
+  </material>
+  <link name="cam0">
+    <visual>
+     <origin xyz="0 0 -0.045000" rpy="0 0 0"/>
+     <geometry> <box size="0.100000 0.100000 0.100000"/></geometry>
+     <material name="orange"/>
+    </visual>
+    <visual>
+     <material name="orange"/>
+      <geometry>
+        <cylinder length="0.150000" radius="0.040000"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+  </link>
+  <joint name="cam0_to_world" type="fixed">
+    <parent link="map"/>
+    <child link="cam0"/>
+  </joint>
+
+  <material name="green">
+    <color rgba="0.0 1.0 0.0 1.000000"/>
+  </material>
+  <link name="goal">
+    <visual>
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+     <geometry> <box size="0.100000 0.100000 0.100000"/></geometry>
+     <material name="green"/>
+    </visual>
+  </link>
+  <joint name="goal_to_world" type="fixed">
+    <parent link="map"/>
+    <child link="goal"/>
+  </joint>
+ <link name="tag_0">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00000.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_0_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_0"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_1">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00001.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_1_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_1"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_2">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00002.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_2_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_2"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_3">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00003.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_3_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_3"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_4">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00004.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_4_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_4"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_5">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00005.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_5_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_5"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_6">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00006.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_6_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_6"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_7">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00007.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_7_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_7"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_8">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00008.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_8_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_8"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_9">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00009.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_9_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_9"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_10">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00010.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_10_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_10"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_11">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00011.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_11_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_11"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_12">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00012.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_12_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_12"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_13">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00013.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_13_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_13"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_14">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00014.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_14_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_14"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_15">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00015.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_15_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_15"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_100">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00100.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_100_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_100"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+ <link name="tag_101">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 -0.000700"/>
+     <geometry>
+       <mesh filename="file:///home/sacha/tagslam_root/src/tagslam_viz/tags/36_11/tag36_11_00101.dae" scale="0.140000 0.140000 0.140000"/>
+     </geometry>
+  </visual>
+ </link>
+ <joint name="tag_101_to_world" type="fixed">
+   <parent link="map"/>
+   <child link="tag_101"/>
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
+</robot>

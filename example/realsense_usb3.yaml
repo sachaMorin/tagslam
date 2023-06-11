@@ -1,0 +1,9 @@
+cam0:
+  camera_model: pinhole
+  intrinsics: [908.21429, 908.43706, 640.79161, 375.69408]
+  distortion_model: plumb_bob
+  distortion_coeffs: [0.07451, -0.13550, 0.00348, 0.00051, 0.00000]
+  resolution: [1280, 720]
+  rostopic: /camera/color/image_raw
+  tagtopic: /detector/tags
+  rig_body: rig
