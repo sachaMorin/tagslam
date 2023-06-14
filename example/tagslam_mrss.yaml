@@ -477,7 +477,7 @@ bodies:
             position:
               x: 0
               y: 0
-              z: 0
+              z: 0.305
             rotation:
               x: 0
               y: 0
@@ -493,12 +493,125 @@ bodies:
         - id: 101
           pose: # Tag to body
             position:
+              x: 0.305
+              y: 0
+              z: 0
+            rotation:
+              x: 0
+              y: 1.5708
+              z: 0
+            position_noise:
+              x: 0.02
+              y: 0.02
+              z: 0.02
+            rotation_noise:
+              x: 0.0174533
+              y: 0.0174533
+              z: 0.0174533
+        - id: 102
+          pose: # Tag to body
+            position:
               x: 0
               y: 0
-              z: -0.09
+              z: -0.305
             rotation:
               x: 0
               y: 3.14159
+              z: 0
+            position_noise:
+              x: 0.02
+              y: 0.02
+              z: 0.02
+            rotation_noise:
+              x: 0.0174533
+              y: 0.0174533
+              z: 0.0174533
+        - id: 103
+          pose: # Tag to body
+            position:
+              x: -0.305
+              y: 0
+              z: 0
+            rotation:
+              x: 0
+              y: -1.5708
+              z: 0
+            position_noise:
+              x: 0.02
+              y: 0.02
+              z: 0.02
+            rotation_noise:
+              x: 0.0174533
+              y: 0.0174533
+              z: 0.0174533
+  - obstacle2:
+      is_static: false
+      default_tag_size: 0.17
+      type: simple
+      tags:
+        - id: 104
+          pose: # Tag to body
+            position:
+              x: 0
+              y: 0
+              z: 0.305
+            rotation:
+              x: 0
+              y: 0
+              z: 0
+            position_noise:
+              x: 0.02
+              y: 0.02
+              z: 0.02
+            rotation_noise:
+              x: 0.0174533
+              y: 0.0174533
+              z: 0.0174533
+        - id: 105
+          pose: # Tag to body
+            position:
+              x: 0.305
+              y: 0
+              z: 0
+            rotation:
+              x: 0
+              y: 1.5708
+              z: 0
+            position_noise:
+              x: 0.02
+              y: 0.02
+              z: 0.02
+            rotation_noise:
+              x: 0.0174533
+              y: 0.0174533
+              z: 0.0174533
+        - id: 106
+          pose: # Tag to body
+            position:
+              x: 0
+              y: 0
+              z: -0.305
+            rotation:
+              x: 0
+              y: 3.14159
+              z: 0
+            position_noise:
+              x: 0.02
+              y: 0.02
+              z: 0.02
+            rotation_noise:
+              x: 0.0174533
+              y: 0.0174533
+              z: 0.0174533
+        - id: 107
+          pose: # Tag to body
+            position:
+              x: -0.305
+              y: 0
+              z: 0
+            rotation:
+              x: 0
+              y: -1.5708
               z: 0
             position_noise:
               x: 0.02
