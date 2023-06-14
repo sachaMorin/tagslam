@@ -43,6 +43,9 @@
         <arg name="has_compressed_images" value="(arg has_compressed_images)"/>
     </include>
 
+    <!--Tf repeater for obstacles-->
+    <node type="tf_repeater" name="tf_repeater" pkg="tagslam"/>
+
     <!--Rviz-->
     <group if="$(arg rviz)">
         <node type="rviz" name="rviz" pkg="rviz" args="-d $(find tagslam)/example/tagslam_example.rviz" />
